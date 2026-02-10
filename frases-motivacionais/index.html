@@ -1,0 +1,66 @@
+<!-- Projeto da aula 158 -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<!-- Javascript -->
+	<script>
+		function gerarFrasesMotivacionais() {
+			const frases = [
+				"Em busca do ótimo não se faz o bom.",
+				"O sucesso é a soma de pequenos esforços repetidos dia após dia.",
+				"Não é a montanha que devemos conquistar, mas a nós mesmos.",
+				"O único lugar onde o sucesso vem antes do trabalho é no dicionário.",
+				"A vida é 10% o que acontece com você e 90% como você reage.",
+				"Acredite que você consegue e você está no meio do caminho.",
+				"O fracasso é apenas uma oportunidade para começar novamente com mais inteligência.",
+				"Grandes coisas nunca vieram do conforto da zona de conforto.",
+				"Você não é vencido até acreditar que é.",
+				"Cada novo dia é uma chance de mudar sua vida."
+			];
+
+			let randomNum = Math.floor(Math.random() * 10)
+			document.getElementById('frase-motivacional').innerHTML = frases[randomNum]
+
+		}
+
+
+	</script>
+
+	<title>Frases motivacionais</title>
+
+</head>
+
+<body>
+
+	<div class="container mt-5">
+		<div class="row">
+			<div class="col-md-12">
+
+				<div class="jumbotron">
+					<h1 class="text-success display-5">Frases motivacionais</h1>
+					<hr>
+
+					<h2 class="display-4" id="frase-motivacional">
+						Em busca do ótimo não se faz o bom.
+					</h2>
+
+					<hr>
+					<button type="button" class="btn btn-success btn-lg" onclick="gerarFrasesMotivacionais()" 
+						>Nova frase</button>
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
