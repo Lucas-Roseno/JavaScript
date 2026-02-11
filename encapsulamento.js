@@ -87,18 +87,3 @@ conta.sacar(50) //450
 conta.depositar(100) //550
 
 console.log(conta.saldo)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

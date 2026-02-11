@@ -1,0 +1,73 @@
+//Descendentes de Object
+Object.prototype
+
+/*
+Todo objeto criado no js é descendente de 'Object.prototype' que é basicamente um 
+prótotipo padrão para todos os objetos, que contém algumas funções.
+ */
+
+const obj = {
+}
+
+//console.log( obj.toString() )
+//console.log( obj.__proto__ )
+//console.log( obj.__proto__ == Object.prototype )
+
+class Carro {
+  constructor(){
+    this.placa = "AMP-1230"
+  }
+}
+
+class Bmw extends Carro {
+  constructor(){
+    super()
+    this.nome = "BMW 320i"
+  }
+}
+/*
+const objBmw = new Bmw()
+console.log(objBmw.placa)
+console.log(objBmw.nome)
+*/
+//Prototype Chain - encadeamento de objetos
+const veiculo = {
+  motor: "50 cavalos" 
+}
+
+const carro = {
+  placa : "AMP-1230",
+  motor: "300 cavalos",
+  __proto__: veiculo,
+  acelerar: function(){
+    console.log( "Acelerar" )
+  }
+  
+}
+
+const bmw = {
+  nome : "BMW 320i",
+  __proto__: carro
+}
+
+console.log( bmw.toString() )
+
+
+/*
+Basicamente as classes por trás dos panos do js são prototipos
+Para se herdar características e métodos de um objeto usa-se a linguagem:
+'__proto__ : nomeObjeto' 
+Quando se herda um prototípo existe uma relação em cadeia. Quando se tenta acessar
+um atributo de um objeto primeiro ele tenta localiza-lo dentro do objeto, 
+se não for encontrado ele sobe para o protótipo que foi herdado
+*/
+
+
+
+
+
+
+
+
+
+
