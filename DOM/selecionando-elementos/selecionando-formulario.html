@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="cadastro">
+        <input type="text" name="nome">
+        <input type="email" name="email" id="">
+
+        <select name="sexo" id="">
+            <option value="">---</option>
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+        </select>
+    </form>
+
+    <button onclick="setValues()">Setar valores automáticos</button>
+
+    <script>
+
+        /*
+        Formas de acessar o formulário
+		const obj=document.getElementsByName('cadastro')
+		console.log(obj[0])*/
+		//console.log(document.forms)
+		//console.log(document.forms[0])
+		//console.log(document.cadastro.sexo)
+		//document.cadastro.nome.value = "Jamilton"
+		//document.cadastro.sexo.value = "feminino"
+
+
+
+        function setValues() {
+            document.cadastro.nome.value = 'Lucas'
+            document.cadastro.email.value = 'lucas@gmail.com'
+            document.cadastro.sexo.value = 'masculino'
+
+            /* Se quisesse pegar oq o usuário digitou
+            let nome = document.cadastro.nome.value
+			let email = document.cadastro.email.value
+			let sexo = document.cadastro.sexo.value
+			console.log(nome)
+			console.log(email)
+			console.log(sexo)*/
+        }
+    </script>
+
+</body>
+</html>

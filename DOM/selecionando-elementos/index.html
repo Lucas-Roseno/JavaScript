@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionando Elementos</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <div id="destaque">Área de conteúdo</div>
+    <h1 class="vermelho">Título do Site</h1>
+    <p>Subtitulo</p>
+
+    <ul>
+        <li class="primeiro">Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+    <ul>
+        <li class="primeiro">Item 1 novo</li>
+        <li>Item 2 novo</li>
+    </ul>
+
+    <input type="text" name="input1">
+    <input type="datetime" name="input1">
+
+    <div id="destaque">Área de conteúdo2</div>
+
+    <button onclick="trocarNome()">Clique aqui</button>
+    <script>
+        // Com o getElementById você pega o elemento direto da página
+        //const obj = document.getElementById('destaque')
+
+        //Com o query se pega sua formatação no css
+        /*
+        const obj = document.querySelector('#destaque')
+
+        console.log(obj.textContent)
+
+        function trocarNome() {
+            // const texto = document.querySelector('.primeiro')
+            const texto = document.getElementsByClassName('primeiro')
+
+            texto[0].innerHTML = 'Teste'
+        }
+        */
+
+        //.getElementsByTagName pega todos os elementos com a mesma tag e retorna uma coleção
+        // que é semelhante a um array
+        // const colecao = document.getElementsByTagName('li')
+        // console.log(colecao)
+
+
+        // getElementsByClassName faz igual ao de cima, pega todos os elementos de mesma classe em uma coleção
+        // const obj = document.getElementsByClassName('primeiro')
+        // console.log(obj)
+
+
+        // Memsa coisa dos demais, mais utilizado para formulários
+        // const obj = document.getElementsByName('input1')
+        // console.log(obj)
+
+
+
+        //Faz a mesma coisa do query que pega só um elemento, só que agr pega todos
+        const obj = document.querySelectorAll('#destaque')
+        console.log(obj[1].textContent)
+    </script>
+
+</body>
+
+</html>

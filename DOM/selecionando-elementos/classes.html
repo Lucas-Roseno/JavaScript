@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <h1 id="titulo">Lucas Chefe</h1>
+    <button onclick="mudarClasse()">CLique aqui</button>
+    
+    <script>
+        function mudarClasse(params) {
+            const item = document.getElementById('titulo')
+            //item.classList.add('vermelho')
+            const listaItens = item.classList
+            listaItens.add('vermelho')
+
+            //Maneiras de acessar as classes:
+            //console.log(classes)
+			//console.log(classes.length)
+			//console.log(classes.contains('vermelho'))
+			//classes.add('texto')
+			//classes.remove('vermelho')
+			//classes.toggle('vermelho') vai ficar alterando entre um e outro
+			//obj.className = "texto"
+
+			classes.forEach(item=>console.log(item))
+        }
+    </script>
+
+</body>
+</html>
