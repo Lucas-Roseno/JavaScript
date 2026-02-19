@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Eventos teclado</title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+
+	<input type="text" id="entrada">
+
+	<script type="text/javascript">
+		
+
+		function executar(){
+			console.log("Executar")
+		}
+
+		const obj = document.getElementById('entrada')
+		
+		//Contabiliza qualquer tecla que for aperta e continua executando se a tecla for mantida pressionan
+		//obj.addEventListener('keydown', executar)
+
+		// Quando se solta a tecla ele executa
+		//obj.addEventListener('keyup', executar)
+
+		//Para quando está digitando, não contabiliza se a tecla for mantida pressionada e não funciona
+		// para as teclas especiais
+		obj.addEventListener('keypress', executar)
+
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
+

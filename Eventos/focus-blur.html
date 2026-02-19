@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Eventos mouse</title>
+	
+</head>
+<body>
+
+	<input type="text" id="entrada">
+
+	<script type="text/javascript">
+		
+		function executar(){
+			console.log("ganhou foco")
+		}
+
+        function executar2(){
+			console.log("perdeu foco")
+		}
+
+        const obj = document.getElementById('entrada')
+
+        //focus -> elemento ganha foco, normalmente quando se clica em uma caixa de texto
+        obj.addEventListener('focus', executar)
+
+        //blur -> contrário, perdeu o foco
+        obj.addEventListener('blur', executar2)
+
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
